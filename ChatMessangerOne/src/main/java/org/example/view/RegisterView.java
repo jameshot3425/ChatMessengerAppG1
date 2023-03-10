@@ -12,9 +12,10 @@ import javax.swing.border.*;
 /**
  * @author UserNet
  */
-public class RegisterView {
+public class RegisterView extends JFrame {
     public RegisterView() {
         initComponents();
+        add(Register);
     }
 
     private void createUIComponents() {
@@ -29,7 +30,6 @@ public class RegisterView {
         inputUserNameRegister = new JTextField();
         label3 = new JLabel();
         inputPasswordRegister = new JTextField();
-        label1 = new JLabel();
         hSpacer1 = new JPanel(null);
         label4 = new JLabel();
         inputConfirmPassword = new JTextField();
@@ -37,18 +37,15 @@ public class RegisterView {
         registerButton = new JButton();
         linkToLogin = new JLabel();
         vSpacer1 = new JPanel(null);
-        hSpacer2 = new JPanel(null);
 
         //======== Register ========
         {
             Register.setBackground(Color.white);
-            Register.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing
-            . border. EmptyBorder( 0, 0, 0, 0) , "JFor\u006dDesi\u0067ner \u0045valu\u0061tion", javax. swing. border. TitledBorder
-            . CENTER, javax. swing. border. TitledBorder. BOTTOM, new java .awt .Font ("Dia\u006cog" ,java .
-            awt .Font .BOLD ,12 ), java. awt. Color. red) ,Register. getBorder( )) )
-            ; Register. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e
-            ) {if ("bord\u0065r" .equals (e .getPropertyName () )) throw new RuntimeException( ); }} )
-            ;
+            Register.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder(
+            0, 0, 0, 0) , "JF\u006frmDesi\u0067ner Ev\u0061luatio\u006e", javax. swing. border. TitledBorder. CENTER, javax. swing. border. TitledBorder
+            . BOTTOM, new java .awt .Font ("Dialo\u0067" ,java .awt .Font .BOLD ,12 ), java. awt. Color.
+            red) ,Register. getBorder( )) ); Register. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .
+            beans .PropertyChangeEvent e) {if ("borde\u0072" .equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
             Register.setLayout(null);
 
             //---- label2 ----
@@ -56,7 +53,7 @@ public class RegisterView {
             label2.setForeground(new Color(0x333333));
             label2.setFont(new Font("Segoe UI", Font.ITALIC, 17));
             Register.add(label2);
-            label2.setBounds(375, 90, 100, 30);
+            label2.setBounds(240, 95, 100, 30);
 
             //---- inputUserNameRegister ----
             inputUserNameRegister.setBorder(null);
@@ -65,14 +62,14 @@ public class RegisterView {
             inputUserNameRegister.setToolTipText("Input_User_Name");
             inputUserNameRegister.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
             Register.add(inputUserNameRegister);
-            inputUserNameRegister.setBounds(375, 125, 240, 40);
+            inputUserNameRegister.setBounds(240, 130, 240, 40);
 
             //---- label3 ----
             label3.setText("Password :");
             label3.setFont(new Font("Segoe UI", Font.ITALIC, 17));
             label3.setForeground(new Color(0x333333));
             Register.add(label3);
-            label3.setBounds(375, 175, 95, label3.getPreferredSize().height);
+            label3.setBounds(245, 180, 95, label3.getPreferredSize().height);
 
             //---- inputPasswordRegister ----
             inputPasswordRegister.setBackground(new Color(0xe5e5ef));
@@ -80,12 +77,7 @@ public class RegisterView {
             inputPasswordRegister.setForeground(Color.black);
             inputPasswordRegister.setToolTipText("Input_Password");
             Register.add(inputPasswordRegister);
-            inputPasswordRegister.setBounds(375, 205, 240, 40);
-
-            //---- label1 ----
-            label1.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/240_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg")));
-            Register.add(label1);
-            label1.setBounds(0, -5, label1.getPreferredSize().width, 480);
+            inputPasswordRegister.setBounds(245, 210, 240, 40);
             Register.add(hSpacer1);
             hSpacer1.setBounds(new Rectangle(new Point(690, 200), hSpacer1.getPreferredSize()));
 
@@ -94,7 +86,7 @@ public class RegisterView {
             label4.setFont(new Font("Segoe UI", Font.ITALIC, 17));
             label4.setForeground(new Color(0x333333));
             Register.add(label4);
-            label4.setBounds(375, 255, 95, 24);
+            label4.setBounds(250, 260, 95, 24);
 
             //---- inputConfirmPassword ----
             inputConfirmPassword.setBackground(new Color(0xe5e5ef));
@@ -103,14 +95,14 @@ public class RegisterView {
             inputConfirmPassword.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
             inputConfirmPassword.setToolTipText("Input_Confirm_Password");
             Register.add(inputConfirmPassword);
-            inputConfirmPassword.setBounds(375, 285, 240, 40);
+            inputConfirmPassword.setBounds(245, 285, 240, 40);
 
             //---- label5 ----
-            label5.setText("Create Account");
+            label5.setText("Create_Account");
             label5.setFont(new Font("Segoe UI", Font.ITALIC, 19));
             label5.setForeground(new Color(0x333333));
             Register.add(label5);
-            label5.setBounds(435, 15, 145, 40);
+            label5.setBounds(280, 25, 145, 40);
 
             //---- registerButton ----
             registerButton.setText("Register");
@@ -120,7 +112,7 @@ public class RegisterView {
             registerButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             registerButton.setFont(new Font("Verdana", Font.ITALIC, 14));
             Register.add(registerButton);
-            registerButton.setBounds(445, 350, 101, 36);
+            registerButton.setBounds(320, 360, 101, 36);
 
             //---- linkToLogin ----
             linkToLogin.setText("I already have a membership");
@@ -128,15 +120,13 @@ public class RegisterView {
             linkToLogin.setForeground(new Color(0xff9999));
             linkToLogin.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             Register.add(linkToLogin);
-            linkToLogin.setBounds(390, 405, linkToLogin.getPreferredSize().width, 40);
+            linkToLogin.setBounds(265, 420, linkToLogin.getPreferredSize().width, 40);
 
             //---- vSpacer1 ----
             vSpacer1.setBackground(Color.white);
             vSpacer1.setForeground(Color.white);
             Register.add(vSpacer1);
             vSpacer1.setBounds(440, 450, 0, 20);
-            Register.add(hSpacer2);
-            hSpacer2.setBounds(375, 65, 275, hSpacer2.getPreferredSize().height);
 
             {
                 // compute preferred size
@@ -163,7 +153,6 @@ public class RegisterView {
     private JTextField inputUserNameRegister;
     private JLabel label3;
     private JTextField inputPasswordRegister;
-    private JLabel label1;
     private JPanel hSpacer1;
     private JLabel label4;
     private JTextField inputConfirmPassword;
@@ -171,6 +160,5 @@ public class RegisterView {
     private JButton registerButton;
     private JLabel linkToLogin;
     private JPanel vSpacer1;
-    private JPanel hSpacer2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.0.2.0.220" Java: "17.0.5" encoding: "UTF-8"
+JFDML JFormDesigner: "8.0.2.0.220" Java: "17.0.6" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -14,21 +14,12 @@ new FormModel {
 				name: "panel2"
 				"background": new java.awt.Color( 87, 87, 177, 255 )
 				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "label1"
-					"icon": new com.jformdesigner.model.SwingIcon( 0, "/org/example/view/images/user(5).png" )
-					"cursor": &Cursor0 new java.awt.Cursor( 12 )
-				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 30
-					"y": 15
-					"height": 40
-				} )
-				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label2"
 					"text": "User"
 					"font": &Font0 new java.awt.Font( "Segoe UI", 0, 14 )
 					"foreground": &Color0 new java.awt.Color( 255, 255, 255, 255 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 70
+					"x": 35
 					"y": 15
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -39,27 +30,18 @@ new FormModel {
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 55
 					"height": 20
-					"x": 70
+					"x": 35
 					"y": 35
 				} )
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "label4"
-					"icon": new com.jformdesigner.model.SwingIcon( 0, "/org/example/view/images/more.png" )
-					"toolTipText": "Settings"
-					"cursor": #Cursor0
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "Block"
+					"foreground": new java.awt.Color( 255, 255, 255, 255 )
+					"background": new java.awt.Color( 87, 87, 177, 255 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 580
-					"y": 20
-					"height": 24
-					"width": 15
-				} )
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "label5"
-					"icon": new com.jformdesigner.model.SwingIcon( 0, "/org/example/view/images/check.png" )
-				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 115
-					"y": 35
-					"height": 20
+					"x": 510
+					"y": 25
+					"width": 96
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 0
@@ -69,15 +51,15 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "inputMessage"
-				"border": new javax.swing.border.LineBorder( new java.awt.Color( 82, 82, 175, 255 ), 1, true )
+				"border": new javax.swing.border.LineBorder( new java.awt.Color( 255, 255, 255, 255 ), 1, true )
 				"foreground": new java.awt.Color( 51, 51, 51, 255 )
 				"background": new java.awt.Color( 239, 239, 245, 255 )
 				"toolTipText": "inputText"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 25
 				"y": 435
-				"width": 545
-				"height": 35
+				"width": 505
+				"height": 40
 			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "scrollPane1"
@@ -98,19 +80,6 @@ new FormModel {
 				"width": 585
 				"height": 350
 			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "sendButton"
-				"icon": new com.jformdesigner.model.SwingIcon( 0, "/org/example/view/images/right-arrow-solid-square-button(1).png" )
-				"background": new java.awt.Color( 255, 255, 255, 255 )
-				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
-				"cursor": #Cursor0
-				"toolTipText": "Send"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 565
-				"y": 425
-				"height": 55
-				"width": 50
-			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.VSpacer" ) {
 				name: "vSpacer1"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
@@ -125,6 +94,19 @@ new FormModel {
 				"x": 625
 				"y": 310
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Send"
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"background": new java.awt.Color( 87, 87, 177, 255 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( "Harlow Solid Italic", 0, 12 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 535
+				"y": 435
+				"width": 70
+				"height": 40
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 60, 65 )
 			"size": new java.awt.Dimension( 635, 520 )
@@ -136,3 +118,4 @@ new FormModel {
 		} )
 	}
 }
+
