@@ -1,27 +1,22 @@
 /*
- * Created by JFormDesigner on Tue Mar 07 16:46:32 IRST 2023
+ * Created by JFormDesigner on Fri Mar 10 10:43:55 IRST 2023
  */
 
 package org.example.view;
 
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.border.*;
-
 
 /**
  * @author UserNet
  */
-public class RegisterView {
+public class RegisterView extends JFrame  {
+
     public RegisterView() {
-        initComponents();
+        initComponents(null);
+        add(Register);
     }
-
-    private void createUIComponents() {
-        // TODO: add custom component creation code here
-    }
-
-    private void initComponents() {
+    private void initComponents(JFrame parent) {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - shihab
         Register = new JPanel();
@@ -42,13 +37,13 @@ public class RegisterView {
         //======== Register ========
         {
             Register.setBackground(Color.white);
-            Register.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing
-            . border. EmptyBorder( 0, 0, 0, 0) , "JFor\u006dDesi\u0067ner \u0045valu\u0061tion", javax. swing. border. TitledBorder
-            . CENTER, javax. swing. border. TitledBorder. BOTTOM, new java .awt .Font ("Dia\u006cog" ,java .
-            awt .Font .BOLD ,12 ), java. awt. Color. red) ,Register. getBorder( )) )
-            ; Register. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e
-            ) {if ("bord\u0065r" .equals (e .getPropertyName () )) throw new RuntimeException( ); }} )
-            ;
+            Register.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.
+            swing.border.EmptyBorder(0,0,0,0), "",javax.swing.border
+            .TitledBorder.CENTER,javax.swing.border.TitledBorder.BOTTOM,new java.awt.Font(""
+            ,java.awt.Font.BOLD,12),java.awt.Color.red),Register. getBorder
+            ()));Register. addPropertyChangeListener(new java.beans.PropertyChangeListener(){@Override public void propertyChange(java
+            .beans.PropertyChangeEvent e){if("\u0062or\u0064er".equals(e.getPropertyName()))throw new RuntimeException
+            ();}});
             Register.setLayout(null);
 
             //---- label2 ----
@@ -60,10 +55,10 @@ public class RegisterView {
 
             //---- inputUserNameRegister ----
             inputUserNameRegister.setBorder(null);
-            inputUserNameRegister.setBackground(new Color(0xe5e5ef));
             inputUserNameRegister.setForeground(Color.black);
             inputUserNameRegister.setToolTipText("Input_User_Name");
             inputUserNameRegister.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
+            inputUserNameRegister.setBackground(new Color(0xe5e5ef));
             Register.add(inputUserNameRegister);
             inputUserNameRegister.setBounds(375, 125, 240, 40);
 
@@ -75,17 +70,17 @@ public class RegisterView {
             label3.setBounds(375, 175, 95, label3.getPreferredSize().height);
 
             //---- inputPasswordRegister ----
-            inputPasswordRegister.setBackground(new Color(0xe5e5ef));
             inputPasswordRegister.setBorder(null);
             inputPasswordRegister.setForeground(Color.black);
             inputPasswordRegister.setToolTipText("Input_Password");
+            inputPasswordRegister.setBackground(new Color(0xe5e5ef));
             Register.add(inputPasswordRegister);
             inputPasswordRegister.setBounds(375, 205, 240, 40);
 
             //---- label1 ----
             label1.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/240_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg")));
             Register.add(label1);
-            label1.setBounds(0, -5, label1.getPreferredSize().width, 480);
+            label1.setBounds(5, -35, label1.getPreferredSize().width, 480);
             Register.add(hSpacer1);
             hSpacer1.setBounds(new Rectangle(new Point(690, 200), hSpacer1.getPreferredSize()));
 
@@ -106,7 +101,7 @@ public class RegisterView {
             inputConfirmPassword.setBounds(375, 285, 240, 40);
 
             //---- label5 ----
-            label5.setText("Create Account");
+            label5.setText("Create_Account");
             label5.setFont(new Font("Segoe UI", Font.ITALIC, 19));
             label5.setForeground(new Color(0x333333));
             Register.add(label5);

@@ -7,59 +7,52 @@ package org.example.view;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
-import com.intellij.uiDesigner.core.*;
-import net.miginfocom.swing.*;
 
 /**
  * @author UserNet
  */
-public class BlockView {
+public class BlockView extends JFrame {
     public BlockView() {
         initComponents();
+        add(ChatApplication);
     }
 
-    private void initComponents() {
+    public void initComponents() {
+
+
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - shihab
         ChatApplication = new JPanel();
         panel2 = new JPanel();
-        label1 = new JLabel();
         label2 = new JLabel();
         label3 = new JLabel();
-        label4 = new JLabel();
+        label1 = new JLabel();
         label5 = new JLabel();
+        button1 = new JButton();
         inputMessage = new JTextField();
         scrollPane1 = new JScrollPane();
         textFromServer = new JTextArea();
-        sendButton = new JButton();
         vSpacer1 = new JPanel(null);
         hSpacer1 = new JPanel(null);
+        button2 = new JButton();
         hSpacer2 = new JPanel(null);
 
         //======== ChatApplication ========
         {
             ChatApplication.setBackground(Color.white);
             ChatApplication.setForeground(Color.white);
-            ChatApplication.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder (
-            new javax . swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn"
-            , javax. swing .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM
-            , new java. awt .Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 )
-            ,java . awt. Color .red ) ,ChatApplication. getBorder () ) ); ChatApplication. addPropertyChangeListener(
-            new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e
-            ) { if( "\u0062ord\u0065r" .equals ( e. getPropertyName () ) )throw new RuntimeException( )
-            ;} } );
+            ChatApplication.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border
+            .EmptyBorder(0,0,0,0), "",javax.swing.border.TitledBorder.CENTER,javax
+            .swing.border.TitledBorder.BOTTOM,new java.awt.Font("D\u0069alog",java.awt.Font.BOLD,
+            12),java.awt.Color.red),ChatApplication. getBorder()));ChatApplication. addPropertyChangeListener(new java.beans
+            .PropertyChangeListener(){@Override public void propertyChange(java.beans.PropertyChangeEvent e){if("\u0062order".equals(e.
+            getPropertyName()))throw new RuntimeException();}});
             ChatApplication.setLayout(null);
 
             //======== panel2 ========
             {
                 panel2.setBackground(new Color(0x5757b1));
                 panel2.setLayout(null);
-
-                //---- label1 ----
-                label1.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/user(5).png")));
-                label1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-                panel2.add(label1);
-                label1.setBounds(30, 15, label1.getPreferredSize().width, 40);
 
                 //---- label2 ----
                 label2.setText("User");
@@ -75,17 +68,24 @@ public class BlockView {
                 panel2.add(label3);
                 label3.setBounds(70, 35, 55, 20);
 
-                //---- label4 ----
-                label4.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/more.png")));
-                label4.setToolTipText("Settings");
-                label4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-                panel2.add(label4);
-                label4.setBounds(580, 20, 15, 24);
+                //---- label1 ----
+                label1.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/user(5).png")));
+                panel2.add(label1);
+                label1.setBounds(new Rectangle(new Point(30, 20), label1.getPreferredSize()));
 
                 //---- label5 ----
                 label5.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/check.png")));
                 panel2.add(label5);
-                label5.setBounds(115, 35, label5.getPreferredSize().width, 20);
+                label5.setBounds(new Rectangle(new Point(120, 35), label5.getPreferredSize()));
+
+                //---- button1 ----
+                button1.setBorder(null);
+                button1.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/block-user(2).png")));
+                button1.setBackground(new Color(0x5757b1));
+                button1.setToolTipText("This is block");
+                button1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+                panel2.add(button1);
+                button1.setBounds(530, 25, button1.getPreferredSize().width, 25);
 
                 {
                     // compute preferred size
@@ -106,12 +106,12 @@ public class BlockView {
             panel2.setBounds(0, -5, 635, 60);
 
             //---- inputMessage ----
-            inputMessage.setBorder(new LineBorder(new Color(0x5252af), 1, true));
+            inputMessage.setBorder(null);
             inputMessage.setForeground(new Color(0x333333));
             inputMessage.setBackground(new Color(0xefeff5));
             inputMessage.setToolTipText("inputText");
             ChatApplication.add(inputMessage);
-            inputMessage.setBounds(25, 435, 545, 35);
+            inputMessage.setBounds(20, 435, 545, 35);
 
             //======== scrollPane1 ========
             {
@@ -128,20 +128,23 @@ public class BlockView {
                 scrollPane1.setViewportView(textFromServer);
             }
             ChatApplication.add(scrollPane1);
-            scrollPane1.setBounds(23, 75, 585, 350);
-
-            //---- sendButton ----
-            sendButton.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/right-arrow-solid-square-button(1).png")));
-            sendButton.setBackground(Color.white);
-            sendButton.setBorder(null);
-            sendButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-            sendButton.setToolTipText("Send");
-            ChatApplication.add(sendButton);
-            sendButton.setBounds(565, 425, 50, 55);
+            scrollPane1.setBounds(20, 80, 585, 350);
             ChatApplication.add(vSpacer1);
             vSpacer1.setBounds(90, 470, 0, 20);
             ChatApplication.add(hSpacer1);
             hSpacer1.setBounds(new Rectangle(new Point(625, 310), hSpacer1.getPreferredSize()));
+
+            //---- button2 ----
+            button2.setIcon(new ImageIcon(getClass().getResource("/org/example/view/images/right-arrow-solid-square-button(1).png")));
+            button2.setBorder(null);
+            button2.setHorizontalTextPosition(SwingConstants.CENTER);
+            button2.setAutoscrolls(true);
+            button2.setBorderPainted(false);
+            button2.setBackground(SystemColor.inactiveCaptionBorder);
+            button2.setToolTipText("Send");
+            button2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            ChatApplication.add(button2);
+            button2.setBounds(565, 435, 45, 37);
 
             {
                 // compute preferred size
@@ -165,17 +168,17 @@ public class BlockView {
     // Generated using JFormDesigner Evaluation license - shihab
     private JPanel ChatApplication;
     private JPanel panel2;
-    private JLabel label1;
     private JLabel label2;
     private JLabel label3;
-    private JLabel label4;
+    private JLabel label1;
     private JLabel label5;
+    private JButton button1;
     private JTextField inputMessage;
     private JScrollPane scrollPane1;
     private JTextArea textFromServer;
-    private JButton sendButton;
     private JPanel vSpacer1;
     private JPanel hSpacer1;
+    private JButton button2;
     private JPanel hSpacer2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

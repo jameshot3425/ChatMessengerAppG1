@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.0.2.0.220" Java: "17.0.5" encoding: "UTF-8"
+JFDML JFormDesigner: "8.0.2.0.220" Java: "17.0.6" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -20,10 +20,10 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "inputUserNameRegister"
 				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
-				"background": new java.awt.Color( 229, 229, 239, 255 )
 				"foreground": new java.awt.Color( 0, 0, 0, 255 )
 				"toolTipText": "Input_User_Name"
 				"cursor": &Cursor0 new java.awt.Cursor( 2 )
+				"background": new java.awt.Color( 229, 229, 239, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 375
 				"y": 125
@@ -42,10 +42,10 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "inputPasswordRegister"
-				"background": new java.awt.Color( 229, 229, 239, 255 )
 				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
 				"foreground": &Color1 new java.awt.Color( 0, 0, 0, 255 )
 				"toolTipText": "Input_Password"
+				"background": new java.awt.Color( 229, 229, 239, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 240
 				"height": 40
@@ -56,8 +56,8 @@ new FormModel {
 				name: "label1"
 				"icon": new com.jformdesigner.model.SwingIcon( 0, "/org/example/view/images/240_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 0
-				"y": -5
+				"x": 5
+				"y": -35
 				"height": 480
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.HSpacer" ) {
@@ -92,7 +92,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label5"
-				"text": "Create Account"
+				"text": "Create_Account"
 				"font": new java.awt.Font( "Segoe UI", 2, 19 )
 				"foreground": new java.awt.Color( 51, 51, 51, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
@@ -145,7 +145,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 730, 475 )
+			"size": new java.awt.Dimension( 730, 590 )
 		} )
 	}
 }
